@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Repository @Transactional
 public class UserRepoImpl implements UserRepoInt {
@@ -23,4 +24,12 @@ public class UserRepoImpl implements UserRepoInt {
     public Usuario registrarUsuario(Usuario usuario) {
         return entityManager.merge(usuario);
     }
+
+    @Override
+    public List<Usuario> consultarUsuario() {
+        String query = "from Usuario";
+        return entityManager.createQuery(query).getResultList();
+    }
+
+
 }
