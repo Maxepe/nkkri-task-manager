@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nekkrai - Consulta de usuario</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/consultarUsuario.js"></script>
+</head>
+<body>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 style="font-family: Arial, cursive ">Listado de usuarios</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            <!-- Table that shows queryed users (maxepe) -->
+            <table class="table table-bordered" id="usersTableID" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Completo</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Edad</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <button type="button" onclick="consultarUsuario()">Consultar</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

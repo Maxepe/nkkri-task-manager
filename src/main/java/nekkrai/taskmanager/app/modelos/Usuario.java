@@ -14,6 +14,9 @@ public class Usuario {
     @Column(name = "contrasena")
     private String contrasena;
 
+    @Column(name = "telefono")
+    private Integer telefono;
+
     @Column(name = "habilitado")
     private boolean habilitado;
 
