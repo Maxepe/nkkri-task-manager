@@ -6,6 +6,11 @@ import javax.persistence.*;
 @Table(name = "usuario")
 public class Usuario {
     @Id
+    @SequenceGenerator(name="secuencia_usuario",
+            sequenceName="secuencia_usuario",
+            allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator="secuencia_usuario")
     private Long id;
 
     @Column(name = "nombre_usuario")
