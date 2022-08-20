@@ -1,10 +1,6 @@
-$(document).ready(function() {
-
-});
-
 async function registrarUsuario() {
     let usuario = {};
-    usuario.nombre_usuario = document.getElementById('nombre_usuario').value;
+    usuario.nombreUsuario = document.getElementById('nombre_usuario').value;
     usuario.contrasena = document.getElementById('contrasena').value;
     usuario.email = document.getElementById('email').value;
     usuario.edad = document.getElementById('edad').value;

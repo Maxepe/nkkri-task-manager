@@ -20,7 +20,7 @@ public class ControladorUsuario {
 
     @PostMapping(value = "/registrarusuario")
     public void registrarUsuario(@RequestBody Usuario usuario) {
-
+        userRepo.registrarUsuario(usuario);
         System.out.println("[INFO] Registrando usuario: " + usuario.getNombreUsuario());
     }
 
