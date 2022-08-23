@@ -11,6 +11,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/consultarUsuario.js"></script>
+    <link rel="stylesheet" href="css/EstiloConsultaUsuario.css">
 </head>
 <body>
 <div class="card shadow mb-4">
@@ -20,19 +21,27 @@
     <div class="card-body">
         <div class="table-responsive">
 
-            <!-- Table that shows queryed users (maxepe) -->
-            <table class="table table-bordered" id="usersTableID" width="100%" cellspacing="0">
+            <!-- Tabla donde se muestran los usuarios -->
+            <table class="table" id="tablaUsuarios" width="100%" cellspacing="0">
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nombre Completo</th>
+                    <th>Nombre de usuario</th>
                     <th>Email</th>
                     <th>Teléfono</th>
                     <th>Edad</th>
+                    <th>Habilitado</th>
+                    <th>Bloqueado</th>
                 </tr>
                 </thead>
                 <tbody>
-
+                    <td>ID</td>
+                    <td>username</td>
+                    <td>email</td>
+                    <td>tel</td>
+                    <td>edad</td>
+                    <td>habilitado</td>
+                    <td>bloqueado</td>
                 </tbody>
             </table>
             <button type="button" onclick="consultarUsuario()">Consultar</button>
