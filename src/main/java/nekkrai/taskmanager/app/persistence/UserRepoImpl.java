@@ -31,5 +31,11 @@ public class UserRepoImpl implements UserRepoInt {
         return entityManager.createQuery(query).getResultList();
     }
 
+    @Override
+    public void eliminarUsuario(Long idusuario) {
+        Usuario usuario = entityManager.find(Usuario.class, idusuario);
+        entityManager.remove(usuario);
+    }
+
 
 }

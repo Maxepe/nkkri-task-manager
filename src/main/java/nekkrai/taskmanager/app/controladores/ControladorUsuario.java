@@ -31,4 +31,10 @@ public class ControladorUsuario {
         System.out.println("[INFO] Consultando usuario: ");
         return userRepo.consultarUsuario();
     }
+
+    @DeleteMapping(value = "/eliminarusuario/{idUsuario}")
+    public void eliminarUsuario(@PathVariable Long idUsuario){
+        System.out.println("[INFO] Eliminando usuario: ");
+        userRepo.eliminarUsuario(idUsuario);
+    }
 }

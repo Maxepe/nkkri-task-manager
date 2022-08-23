@@ -9,6 +9,8 @@ async function consultarUsuario() {
     const response = await request.json()
     let usuarios = '';
     for (let usuario of response) {
+        let borrar = '<button href="#" onclick="eliminarUsuario('+ usuario.id +')" class="btn btn-danger" ><i class="fas fa-trash"> </i> </button>'
+
         let usuarioHTML =  '<tr> <td>' + usuario.id + '</td>' +
                     '<td>' + usuario.nombreUsuario + '</td>' +
                     '<td>' + usuario.email + '</td>' +
@@ -16,8 +18,25 @@ async function consultarUsuario() {
                     '<td>' + usuario.edad + '</td>' +
                     '<td>' + usuario.habilitado + '</td>' +
                     '<td>' + usuario.bloqueado + '</td>' +
+                    '<td>' + borrar + '</td>' +
                     '</tr>';
         usuarios += usuarioHTML
     }
     document.querySelector('#tablaUsuarios tbody').outerHTML = usuarios;
+}
+
+async function eliminarUsuario(idusuario){
+
+    if(!confirm("Seguro quiere eliminar usuario?")){
+        return
+    }
+
+    const request = await fetch('app/eliminarusuario/'+idusuario, {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+    });
+    window.location.reload()
 }

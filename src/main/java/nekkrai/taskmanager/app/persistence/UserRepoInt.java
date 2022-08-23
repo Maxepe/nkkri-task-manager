@@ -9,4 +9,6 @@ public interface UserRepoInt {
     Usuario registrarUsuario(Usuario usuario);
 
     List<Usuario> consultarUsuario();
+
+    void eliminarUsuario(Long idusuario);
 }
