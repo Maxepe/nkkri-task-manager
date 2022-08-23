@@ -1,0 +1,10 @@
+INSERT INTO usuario
+VALUES (nextval('secuencia_usuario'), 'maxepe', '1234', true, false, 22, 'maxipetrei@outlook.com', null)
+
+INSERT INTO usuario
+VALUES (nextval('secuencia_usuario'), 'db', '1234', true, false, 88, 'db@hotmail.com.ar', null)
+
+INSERT INTO usuario
+VALUES (nextval('secuencia_usuario'), 'bolas', '1234', true, false, 3, 'bolas@hotmail.com.ar', null)
+
+select * from usuario
