@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--    <meta name="viewport"-->
+  <!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nekkrai - Edición de usuario</title>
+
+  <!-- bootstrap, styleSheets -->
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/editarUsuario.js"></script>
+</head>
+<body>
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>Edita tu usuario</h2>
+  </div>
+</div>
+<div class="main">
+  <div id="" class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form>
+        <div class="general-form-group">
+          <label class="general-label">Nombre de usuario: </label>
+          <input id="nombre_usuario" type="text" class="general-input-text" placeholder="Nombre de usuario">
+          <br>
+          <br>
+          <label class="general-label">Contraseña: </label>
+          <input id="contrasena" type="password" class="general-input-text" placeholder="Contraseña">
+          <br>
+          <br>
+          <label class="general-label">Email: </label>
+          <input id="email" type="email" class="general-input-text" placeholder="Email">
+          <br>
+          <br>
+          <label class="general-label">Edad: </label>
+          <input id="edad" type="number" class="general-input-text" placeholder="Edad" maxlength="2">
+        </div>
+        <!--                    <div class="form-group">-->
+        <!--                    </div>-->
+        <button type="submit" class="btn btn-login" onclick="editarUsuario()">Aplicar</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

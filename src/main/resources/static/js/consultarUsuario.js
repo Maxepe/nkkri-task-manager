@@ -10,6 +10,7 @@ async function consultarUsuario() {
     let usuarios = '';
     for (let usuario of response) {
         let borrar = '<button href="#" onclick="eliminarUsuario('+ usuario.id +')" class="btn btn-danger" ><i class="fas fa-trash"> </i> </button>'
+        let editar = '<button href="#" onclick="editarUsuario('+ usuario.id +')" class="btn btn-danger" ><i class="fas fa-trash"> </i> </button>'
 
         let usuarioHTML =  '<tr> <td>' + usuario.id + '</td>' +
                     '<td>' + usuario.nombreUsuario + '</td>' +
@@ -18,7 +19,7 @@ async function consultarUsuario() {
                     '<td>' + usuario.edad + '</td>' +
                     '<td>' + usuario.habilitado + '</td>' +
                     '<td>' + usuario.bloqueado + '</td>' +
-                    '<td>' + borrar + '</td>' +
+                    '<td>' + borrar + editar + '</td>' +
                     '</tr>';
         usuarios += usuarioHTML
     }
@@ -39,4 +40,10 @@ async function eliminarUsuario(idusuario){
         },
     });
     window.location.reload()
+}
+
+function editarUsuario(idUsuario){
+
+    window.location='http://localhost:8080/editarUsuario.html?idusuario='+idUsuario
+
 }

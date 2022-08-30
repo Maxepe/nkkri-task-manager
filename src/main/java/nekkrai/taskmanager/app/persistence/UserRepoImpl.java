@@ -37,5 +37,10 @@ public class UserRepoImpl implements UserRepoInt {
         entityManager.remove(usuario);
     }
 
+    @Override
+    public Usuario editarUsuario(Usuario usuario) {
+        return entityManager.merge(usuario);
+    }
+
 
 }
