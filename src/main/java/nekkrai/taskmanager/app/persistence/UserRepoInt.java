@@ -11,4 +11,6 @@ public interface UserRepoInt {
     List<Usuario> consultarUsuario();
 
     void eliminarUsuario(Long idusuario);
+
+    Usuario editarUsuario(Usuario usuario);
 }

@@ -37,4 +37,10 @@ public class ControladorUsuario {
         System.out.println("[INFO] Eliminando usuario: ");
         userRepo.eliminarUsuario(idUsuario);
     }
+
+    @PostMapping(value = "/editarusuario")
+    public void editarUsuario(@RequestBody Usuario usuario) {
+        userRepo.editarUsuario(usuario);
+        System.out.println("[INFO] editando usuario: " + usuario.getNombreUsuario());
+    }
 }
